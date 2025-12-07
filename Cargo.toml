@@ -22,7 +22,7 @@ indexmap = "2.2.6"
 
 [dependencies.serenity]
 default-features = false
-features = ["builder", "gateway", "model", "utils", "collector", "framework", "transport_compression_zstd"]
+features = ["builder", "gateway", "model", "utils", "collector", "framework"]
 git = "https://github.com/serenity-rs/serenity"
 rev = "5746fad"
 
@@ -37,7 +37,7 @@ fluent-syntax = "0.11"
 rand = "0.8.5"
 
 [features]
-default = ["serenity/rustls_backend", "cache", "chrono", "handle_panics"]
+default = ["serenity/rustls_backend", "cache", "chrono", "handle_panics", "serenity/transport_compression_zstd"]
 chrono = ["serenity/chrono"]
 cache = ["serenity/cache"]
 # No-op feature because serenity/collector is now enabled by default
